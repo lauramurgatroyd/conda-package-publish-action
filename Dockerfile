@@ -5,7 +5,7 @@ LABEL "maintainer"="Andrew Prokhorenkov <andrew.prokhorenkov@gmail.com>"
 
 RUN conda install -y anaconda-client conda-build
 RUN conda install -c anaconda make
-RUN apt-get install g++
+RUN apt install build-essential
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
