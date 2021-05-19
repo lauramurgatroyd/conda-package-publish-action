@@ -28,13 +28,11 @@ build_package(){
 
 upload_package(){
     export ANACONDA_API_TOKEN=$INPUT_ANACONDATOKEN
-    if [ $INPUT_BUILD_WIN = false ]; then
-        anaconda upload --label main linux-64/*.tar.bz2
-    fi
+    anaconda upload --label main linux-64/*.tar.bz2
     if [ $INPUT_CONVERT_OSX = true ]; then
         anaconda upload --label main osx-64/*.tar.bz2
     fi
-    if [ $INPUT_BUILD_WIN = true ] || [ $INPUT_CONVERT_WIN = false ]; then
+    if [ $INPUT_CONVERT_WIN = true ]; then
         anaconda upload --label main win-64/*.tar.bz2
     fi
 }

@@ -16,9 +16,6 @@ inputs:
   publish:
     description: 'Whether to publish to anaconda'
     default: '{false}'
-  build_win:
-    description: 'Whether to build for windows instead of linux'
-    default: '{false}'
   convert_win:
     description: 'Whether to convert linux build for windows'
     default: '{true}'
