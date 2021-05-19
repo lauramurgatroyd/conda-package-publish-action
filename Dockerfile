@@ -4,7 +4,6 @@ LABEL "repository"="https://github.com/m0nhawk/conda-package-publish-action"
 LABEL "maintainer"="Andrew Prokhorenkov <andrew.prokhorenkov@gmail.com>"
 
 RUN conda install -y anaconda-client conda-build
-RUN conda install -c anaconda make
 RUN apt-get update 
 RUN apt-get install -y build-essential --fix-missing
 
