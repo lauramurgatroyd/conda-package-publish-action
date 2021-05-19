@@ -36,6 +36,7 @@ upload_package(){
     fi
     if [ $INPUT_BUILD_WIN = true ] || [ $INPUT_CONVERT_WIN = false ]; then
         anaconda upload --label main win-64/*.tar.bz2
+    fi
 }
 
 go_to_build_dir
